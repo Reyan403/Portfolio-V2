@@ -1,0 +1,128 @@
+{% extends "base.html.twig" %}
+
+{% block header %}
+	<header class="fixed top-0 left-0 right-0 w-full shadow-sm z-50">
+		<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+			<div class="text-3xl font-bold mr-auto">
+				<a href="#">Reyan</a>
+			</div>
+
+			<div class="hidden md:flex">
+				<ul class="flex gap-10 items-center">
+					<li>
+                    <a href="#"
+                    class="menu-link
+                            relative
+                            rounded
+                            after:content-['']
+                            after:absolute
+                            after:left-0
+                            after:-bottom-2
+                            after:w-full
+                            after:h-[2.5px]
+                            after:bg-current
+                            after:scale-x-0
+                            after:origin-right
+                            after:transition-transform
+                            after:duration-300
+                            hover:after:scale-x-100
+                            hover:after:origin-left
+                            [&.active-link]:after:scale-x-100
+                            [&.active-link]:after:origin-left">
+                        Accueil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"
+                    class="menu-link
+                            relative
+                            rounded
+                            after:content-['']
+                            after:absolute
+                            after:left-0
+                            after:-bottom-2
+                            after:w-full
+                            after:h-[2.5px]
+                            after:bg-current
+                            after:scale-x-0
+                            after:origin-right
+                            after:transition-transform
+                            after:duration-300
+                            hover:after:scale-x-100
+                            hover:after:origin-left
+                            [&.active-link]:after:scale-x-100
+                            [&.active-link]:after:origin-left">
+                        Compétences
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"
+                    class="menu-link
+                            relative
+                            rounded
+                            after:content-['']
+                            after:absolute
+                            after:left-0
+                            after:-bottom-2
+                            after:w-full
+                            after:h-[2.5px]
+                            after:bg-current
+                            after:scale-x-0
+                            after:origin-right
+                            after:transition-transform
+                            after:duration-300
+                            hover:after:scale-x-100
+                            hover:after:origin-left
+                            [&.active-link]:after:scale-x-100
+                            [&.active-link]:after:origin-left">
+                        Projets
+                    </a>
+                </li>
+
+					<li>
+						<button id="button" class="cursor-pointer" aria-label="Theme">
+							<svg id="theme" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/>
+							</svg>
+						</button>
+					</li>
+				</ul>
+			</div>
+
+			<button id="menu-hamburger" class="flex flex-col justify-between w-8 h-4 cursor-pointer md:hidden relative z-50">
+				<span class="block w-full h-[3px] bg-black rounded-full duration-300"></span>
+				<span class="block w-full h-[3px] bg-black rounded-full duration-300"></span>
+			</button>
+		</div>
+
+        <div id="mobile-menu"
+            class="fixed
+                    justify-left
+                    pl-6
+                    pt-12
+                    top-[72px]
+                    left-0
+                    right-0
+                    bottom-0
+                    bg-white
+                    z-40
+                    duration-300
+                    ease-in-out
+                    opacity-0
+                    invisible
+                    flex
+                    flex-col
+                    gap-15
+                    md:hidden">
+            <a href="#" class="text-3xl font-medium hover:text-gray-600">Accueil</a>
+            <a href="#" class="text-3xl font-medium hover:text-gray-600">Compétences</a>
+            <a href="#" class="text-3xl font-medium hover:text-gray-600">Projets</a>
+            <a href="#" class="text-3xl font-medium hover:text-gray-600">Contact</a>
+            <button id="button-mobile" class="text-3xl font-medium hover:text-gray-600 text-left">
+                Mode sombre
+            </button>
+        </div>
+	</header>
+{% endblock %}
