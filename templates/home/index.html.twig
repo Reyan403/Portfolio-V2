@@ -5,5 +5,158 @@
 
 {% block body %}
 	{% include "includes/header.html.twig" %}
+
+{# BLOC D'ACCUEIL #}
+	<section class="relative overflow-hidden">
+        <div 
+			class="
+				absolute
+				top-1/2
+				left-1/2
+				-translate-x-1/2
+				-translate-y-1/2
+				w-[500px]
+				h-[500px]
+				bg-gradient-to-r
+				from-blue-400/30
+				to-purple-500/30
+				rounded-full
+				blur-[100px]
+				-z-10
+				group-[.bg-black]:from-blue-600/20
+				group-[.bg-black]:to-purple-600/20
+			"
+		></div>
+
+		<div class="max-w-7xl mx-auto px-6 py-36 md:py-72">
+			<div class="grid text-center">
+				<h1 class="md:text-7xl text-5xl font-bold animate-fade-in-up">Bienvenue sur mon Portfolio</h1>
+				<p
+					class="
+						text-lg
+						text-gray-500
+						group-[.bg-black]:text-white
+						py-8
+						max-w-3xl
+						mx-auto
+						animate-fade-in-up
+						animation-delay-200
+					"
+				>
+					Étudiant en BTS SIO option SLAM, je développe des applications web en utilisant des technologies 
+					modernes. J’aime concevoir des solutions fonctionnelles, performantes et adaptées aux besoins des utilisateurs.
+				</p>
+				<div class="grid sm:flex gap-6 justify-center animate-fade-in-up animation-delay-400">
+					<a 
+						href="#"
+						class="
+							bg-[#323232]
+							hover:bg-[rgba(32,32,32,0.8)]
+							duration-300
+							text-white
+							text-sm
+							px-6
+							py-3
+							rounded-[10px]
+							font-[600]
+							group-[.bg-black]:bg-white
+							group-[.bg-black]:text-black
+							group-[.bg-black]:hover:bg-gray-200
+						"
+					>
+						Contactez-moi
+					</a>
+					<a 
+						href="#"
+						class="
+							bg-white
+							border
+							border-black
+							text-black
+							text-sm
+							px-6
+							py-3
+							rounded-[10px]
+							font-[600]
+							hover:bg-gray-100
+							duration-300
+							group-[.bg-black]:bg-transparent
+							group-[.bg-black]:border-white
+							group-[.bg-black]:text-white
+							group-[.bg-black]:hover:bg-white/10
+						"
+					>
+						Mes réalisations
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{# BLOC COMPETENCES #}
+	<section id="competences" class="py-20 px-6 relative overflow-hidden">
+        <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+
+		<div class="max-w-7xl mx-auto">
+			<div class="text-center mb-16 scroll-animate opacity-0">
+				<h2 class="text-4xl md:text-5xl font-bold mb-6 group-[.bg-black]:text-white">Mes compétences</h2>
+				<p class="text-lg text-gray-500 group-[.bg-black]:text-gray-400 max-w-2xl mx-auto">
+					Un ensemble d'outils et de technologies modernes pour donner vie à vos projets.
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-3 gap-8">
+				{# Frontend Card #}
+				<div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group-[.bg-black]:bg-[#111] group-[.bg-black]:border-[#333] scroll-animate opacity-0 animation-delay-200 group">
+					<div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-[.bg-black]:bg-blue-900/20">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-blue-600 group-[.bg-black]:text-blue-400">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold mb-6 group-[.bg-black]:text-white">Frontend</h3>
+					<div class="flex flex-wrap gap-3">
+						<span class="px-3 py-1.5 bg-gray-50 text-gray-600 rounded-lg text-sm font-medium border border-gray-100 group-[.bg-black]:bg-[#222] group-[.bg-black]:text-gray-300 group-[.bg-black]:border-[#333]">HTML5</span>
+						<span class="px-3 py-1.5 bg-gray-50 text-gray-600 rounded-lg text-sm font-medium border border-gray-100 group-[.bg-black]:bg-[#222] group-[.bg-black]:text-gray-300 group-[.bg-black]:border-[#333]">CSS3</span>
+						<span class="px-3 py-1.5 bg-gray-50 text-gray-600 rounded-lg text-sm font-medium border border-gray-100 group-[.bg-black]:bg-[#222] group-[.bg-black]:text-gray-300 group-[.bg-black]:border-[#333]">JavaScript</span>
+						<span class="px-3 py-1.5 bg-gray-50 text-gray-600 rounded-lg text-sm font-medium border border-gray-100 group-[.bg-black]:bg-[#222] group-[.bg-black]:text-gray-300 group-[.bg-black]:border-[#333]">Tailwind CSS</span>
+                        <span class="px-3 py-1.5 bg-gray-50 text-gray-600 rounded-lg text-sm font-medium border border-gray-100 group-[.bg-black]:bg-[#222] group-[.bg-black]:text-gray-300 group-[.bg-black]:border-[#333]">Twig</span>
+					</div>
+				</div>
+
+				{# Backend Card #}
+				<div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group-[.bg-black]:bg-[#111] group-[.bg-black]:border-[#333] scroll-animate opacity-0 animation-delay-200 group">
+					<div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center mb-6 group-[.bg-black]:bg-green-900/20">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-green-600 group-[.bg-black]:text-green-400">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold mb-6 group-[.bg-black]:text-white">Backend</h3>
+					<div class="flex flex-wrap gap-3">
+						<span class="px-3 py-1.5 bg-gray-50 text-gray-600 rounded-lg text-sm font-medium border border-gray-100 group-[.bg-black]:bg-[#222] group-[.bg-black]:text-gray-300 group-[.bg-black]:border-[#333]">PHP 8</span>
+						<span class="px-3 py-1.5 bg-gray-50 text-gray-600 rounded-lg text-sm font-medium border border-gray-100 group-[.bg-black]:bg-[#222] group-[.bg-black]:text-gray-300 group-[.bg-black]:border-[#333]">Symfony 7</span>
+						<span class="px-3 py-1.5 bg-gray-50 text-gray-600 rounded-lg text-sm font-medium border border-gray-100 group-[.bg-black]:bg-[#222] group-[.bg-black]:text-gray-300 group-[.bg-black]:border-[#333]">MySQL</span>
+						<span class="px-3 py-1.5 bg-gray-50 text-gray-600 rounded-lg text-sm font-medium border border-gray-100 group-[.bg-black]:bg-[#222] group-[.bg-black]:text-gray-300 group-[.bg-black]:border-[#333]">SQL Server</span>
+					</div>
+				</div>
+
+				{# Workflow Card #}
+				<div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group-[.bg-black]:bg-[#111] group-[.bg-black]:border-[#333] scroll-animate opacity-0 animation-delay-200 group">
+					<div class="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center mb-6 group-[.bg-black]:bg-purple-900/20">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-purple-600 group-[.bg-black]:text-purple-400">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold mb-6 group-[.bg-black]:text-white">Outils & Workflow</h3>
+					<div class="flex flex-wrap gap-3">
+						<span class="px-3 py-1.5 bg-gray-50 text-gray-600 rounded-lg text-sm font-medium border border-gray-100 group-[.bg-black]:bg-[#222] group-[.bg-black]:text-gray-300 group-[.bg-black]:border-[#333]">Git & GitHub</span>
+						<span class="px-3 py-1.5 bg-gray-50 text-gray-600 rounded-lg text-sm font-medium border border-gray-100 group-[.bg-black]:bg-[#222] group-[.bg-black]:text-gray-300 group-[.bg-black]:border-[#333]">VS Code</span>
+						<span class="px-3 py-1.5 bg-gray-50 text-gray-600 rounded-lg text-sm font-medium border border-gray-100 group-[.bg-black]:bg-[#222] group-[.bg-black]:text-gray-300 group-[.bg-black]:border-[#333]">Agile / Scrum</span>
+						<span class="px-3 py-1.5 bg-gray-50 text-gray-600 rounded-lg text-sm font-medium border border-gray-100 group-[.bg-black]:bg-[#222] group-[.bg-black]:text-gray-300 group-[.bg-black]:border-[#333]">Merise</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 {% endblock %}
 
