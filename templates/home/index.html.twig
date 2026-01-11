@@ -8,45 +8,48 @@
 
 {# BLOC D'ACCUEIL #}
 	<section class="relative overflow-hidden">
-        <div 
-			class="
-				absolute
-				top-1/2
-				left-1/2
-				-translate-x-1/2
-				-translate-y-1/2
-				w-[500px]
-				h-[500px]
-				bg-gradient-to-r
-				from-blue-400/30
-				to-purple-500/30
-				rounded-full
-				blur-[100px]
-				-z-10
-				group-[.bg-black]:from-blue-600/20
-				group-[.bg-black]:to-purple-600/20
-			"
-		></div>
-
-		<div class="max-w-7xl mx-auto px-6 py-36 md:py-72">
-			<div class="grid text-center">
-				<h1 class="md:text-7xl text-5xl font-bold animate-fade-in-up">Bienvenue sur mon Portfolio</h1>
+		<div class="max-w-7xl mx-auto px-6 py-36 md:py-64 lg:flex lg:gap-12 items-center grid">
+			<div class="lg:text-left text-center lg:w-1/2 relative">
+				<div 
+					class="
+						absolute
+						top-1/2
+						left-1/2
+						-translate-x-1/2
+						-translate-y-1/2
+						w-[500px]
+						h-[500px]
+						bg-gradient-to-r
+						from-blue-400/30
+						to-purple-500/30
+						rounded-full
+						blur-[100px]
+						-z-10
+						group-[.bg-black]:from-blue-600/20
+						group-[.bg-black]:to-purple-600/20
+					"
+				></div>
+				<h1 class="md:text-7xl text-5xl font-extrabold animate-fade-in-up tracking-tight mb-2">
+					Étudiant<br/>
+					<span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 group-[.bg-black]:from-blue-400 group-[.bg-black]:to-purple-400">
+						Développeur Web
+					</span>
+				</h1>
 				<p
 					class="
 						text-lg
 						text-gray-500
 						group-[.bg-black]:text-white
 						py-8
-						max-w-3xl
-						mx-auto
+						max-w-7xl
 						animate-fade-in-up
 						animation-delay-200
 					"
 				>
-					Étudiant en BTS SIO option SLAM, je développe des applications web en utilisant des technologies 
+					Reyan Ghazzaoui - Étudiant en BTS SIO option SLAM, je développe des applications web en utilisant des technologies 
 					modernes. J’aime concevoir des solutions fonctionnelles, performantes et adaptées aux besoins des utilisateurs.
 				</p>
-				<div class="grid sm:flex gap-6 justify-center animate-fade-in-up animation-delay-400">
+				<div class="sm:flex gap-6 animate-fade-in-up animation-delay-400 grid lg:justify-start justify-center">
 					<a 
 						href="#"
 						class="
@@ -90,7 +93,14 @@
 					</a>
 				</div>
 			</div>
-		</div>
+			<div class="lg:w-1/2 flex justify-center mt-12 lg:mt-0">
+				<img 
+					src="{{ asset('img/photo.jpg') }}" 
+					alt="Reyan Ghazzaoui" 
+					class="w-full h-auto object-cover rounded-[2rem] shadow-2xl"		
+				>
+			</div>
+		</div>	
 	</section>
 
 {# BLOC COMPETENCES #}
