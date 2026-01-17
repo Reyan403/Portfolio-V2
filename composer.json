@@ -20,6 +20,7 @@
     },
     "require-dev": {
         "symfony/debug-bundle": "8.0.*",
+        "symfony/maker-bundle": "^1.65",
         "symfony/stopwatch": "8.0.*",
         "symfony/web-profiler-bundle": "8.0.*"
     },
