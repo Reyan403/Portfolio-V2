@@ -119,3 +119,83 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.scroll-animate').forEach((el) => {
     observer.observe(el);
 });
+
+
+// FILTRE SKILLS
+const btnTout = document.getElementById('btn-tout');
+const btnFrontEnd = document.getElementById('btn-front-end');
+const btnBackEnd = document.getElementById('btn-back-end');
+const btnOutil = document.getElementById('btn-outil');
+
+const frontEnd = document.querySelectorAll('.skill-front-end');
+const backEnd = document.querySelectorAll('.skill-back-end');
+const outil = document.querySelectorAll('.skill-outil');
+
+// Fonction pour reset les styles des boutons
+function resetButtons() {
+    [btnTout, btnFrontEnd, btnBackEnd, btnOutil].forEach(btn => {
+        if(btn) {
+             // Style Inactif par défaut
+             btn.className = "px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 bg-gray-100 text-gray-500 border border-gray-200 hover:bg-gray-200 hover:text-black hover:-translate-y-1 group-[.bg-black]:bg-white/5 group-[.bg-black]:text-gray-400 group-[.bg-black]:border group-[.bg-black]:border-white/10 group-[.bg-black]:hover:bg-white/10 group-[.bg-black]:hover:text-white";
+        }
+    });
+}
+
+// Fonction pour mettre un bouton en actif
+function setActiveButton(btn) {
+    if(btn) {
+        btn.className = "px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 bg-black text-white border border-black shadow-[0_10px_20px_-10px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_30px_-15px_rgba(0,0,0,0.6)] hover:-translate-y-1 group-[.bg-black]:bg-white group-[.bg-black]:text-black group-[.bg-black]:shadow-[0_10px_20px_-10px_rgba(255,255,255,0.3)] group-[.bg-black]:hover:shadow-[0_20px_30px_-15px_rgba(255,255,255,0.4)]";
+    }
+}
+
+if(btnTout) btnTout.addEventListener('click', () => {
+    resetButtons();
+    setActiveButton(btnTout);
+    frontEnd.forEach(skill => skill.classList.remove('hidden'));
+    backEnd.forEach(skill => skill.classList.remove('hidden'));
+    outil.forEach(skill => skill.classList.remove('hidden'));
+    reorderTimeline();
+});
+
+if(btnFrontEnd) btnFrontEnd.addEventListener('click', () => {
+    resetButtons();
+    setActiveButton(btnFrontEnd);
+    frontEnd.forEach(skill => skill.classList.remove('hidden'));
+    backEnd.forEach(skill => skill.classList.add('hidden'));
+    outil.forEach(skill => skill.classList.add('hidden'));
+    reorderTimeline();
+});
+
+if(btnBackEnd) btnBackEnd.addEventListener('click', () => {
+    resetButtons();
+    setActiveButton(btnBackEnd);
+    frontEnd.forEach(skill => skill.classList.add('hidden'));
+    backEnd.forEach(skill => skill.classList.remove('hidden'));
+    outil.forEach(skill => skill.classList.add('hidden'));
+    reorderTimeline();
+});
+
+if(btnOutil) btnOutil.addEventListener('click', () => {
+    resetButtons();
+    setActiveButton(btnOutil);
+    frontEnd.forEach(skill => skill.classList.add('hidden'));
+    backEnd.forEach(skill => skill.classList.add('hidden'));
+    outil.forEach(skill => skill.classList.remove('hidden'));
+    reorderTimeline();
+});
+
+// Initialiser le bouton "Tout" comme actif
+if(btnTout) setActiveButton(btnTout);
+
+// Fonction pour réordonner la timeline (alternance gauche/droite)
+function reorderTimeline() {
+    const visibleSkills = document.querySelectorAll('.skill-item:not(.hidden)');
+    let invert = false;
+
+    visibleSkills.forEach(skill => {
+        skill.classList.toggle('timeline-inverted', invert);
+        invert = !invert;
+    });
+}
+
+reorderTimeline();

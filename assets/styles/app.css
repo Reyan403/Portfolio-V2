@@ -20,6 +20,23 @@ body {
     .animation-delay-400 {
         animation-delay: 400ms;
     }
+
+    /* Classe inversée pour la timeline (alignement à droite) */
+    .timeline-inverted {
+        align-self: flex-end;
+    }
+    /* Position de la puce (point) pour la version inversée */
+    .timeline-inverted > span {
+        left: -52px;
+        right: auto;
+    }
+    /* Position de la flèche (before) pour la version inversée */
+    @media (min-width: 640px) {
+        .timeline-inverted::before {
+            left: -9px;
+            right: auto;
+        }
+    }
 }
 
 @keyframes fadeInUp {
