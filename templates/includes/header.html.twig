@@ -11,13 +11,17 @@
 				<ul class="flex gap-10 items-center">
 					<li>
                     <a href="{{ path('home') }}"
-                    class="menu-link
+                    class="menu-link 
+                    {# On récupère le nom de la route actuelle #}
+                        {% if app.request.attributes.get('_route') == 'home' %}
+                            active-link
+                        {% endif %}
                             relative
                             rounded
                             after:content-['']
                             after:absolute
                             after:left-0
-                            after:-bottom-2
+                            after:-bottom-2 
                             after:w-full
                             after:h-[2.5px]
                             after:bg-current
@@ -35,7 +39,11 @@
 
                 <li>
                     <a href="{{ path('skills') }}"
-                    class="menu-link
+                    class="menu-link 
+                    {# On récupère le nom de la route actuelle #}
+                        {% if app.request.attributes.get('_route') == 'skills' %}
+                            active-link
+                        {% endif %}
                             relative
                             rounded
                             after:content-['']
@@ -59,7 +67,7 @@
 
                 <li>
                     <a href="#"
-                    class="menu-link
+                    class="menu-link 
                             relative
                             rounded
                             after:content-['']
