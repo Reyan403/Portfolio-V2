@@ -4,13 +4,13 @@
 	<header class="fixed top-0 left-0 right-0 w-full shadow-sm z-50 bg-white">
 		<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 			<div class="text-3xl font-bold mr-auto">
-				<a href="#">Reyan</a>
+				<a href="{{ path('home') }}">Reyan</a>
 			</div>
 
 			<div class="hidden md:flex">
 				<ul class="flex gap-10 items-center">
 					<li>
-                    <a href="#"
+                    <a href="{{ path('home') }}"
                     class="menu-link
                             relative
                             rounded
@@ -34,7 +34,7 @@
                 </li>
 
                 <li>
-                    <a href="#"
+                    <a href="{{ path('skills') }}"
                     class="menu-link
                             relative
                             rounded
@@ -141,10 +141,10 @@
                     flex-col
                     gap-15
                     md:hidden">
-            <a href="#" class="text-3xl font-medium hover:text-gray-600">Accueil</a>
-            <a href="#" class="text-3xl font-medium hover:text-gray-600">Compétences</a>
-            <a href="#" class="text-3xl font-medium hover:text-gray-600">Projets</a>
-            <a href="#" class="text-3xl font-medium hover:text-gray-600">Contact</a>
+            <a href="{{ path('home') }}" class="text-3xl font-medium hover:text-gray-600">Accueil</a>
+            <a href="{{ path('skills') }}" class="text-3xl font-medium hover:text-gray-600">Compétences</a>
+            <a href="" class="text-3xl font-medium hover:text-gray-600">Projets</a>
+            <a href="" class="text-3xl font-medium hover:text-gray-600">Contact</a>
             <button id="button-mobile" class="text-3xl font-medium hover:text-gray-600 text-left">
                 Mode sombre
             </button>
